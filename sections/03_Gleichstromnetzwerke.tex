@@ -9,7 +9,7 @@ Ein Netzwerk besteht in der Regel aus mindestens 2 verknüpften Komponenten.
 Alle Komponenten (Verbindungen, Widerstände, ...) werden als ideal betrachtet. 
 Nicht ideales Verhalten muss explizit modelliert werden.   
 Generell sind die Komponenten eines elektrischen Schaltkreises als dimensionslos und \say{unendlich weit} voneinander entfernt. 
-Daher es existieren keine Effekte wie Thermische, Elektromagnetische,... Beeinflussung welche \textbf{nicht explizit im Schema modelliert oder vermerkt} werden.
+Daher es existieren keine Effekte wie Thermische, Elektromagnetische, ... Beeinflussung, welche \textbf{nicht explizit im Schema modelliert oder vermerkt} werden.
 
 \subsection{Ideale Quellen}
 
@@ -17,29 +17,33 @@ Daher es existieren keine Effekte wie Thermische, Elektromagnetische,... Beeinfl
 
 Eine Ideale Spannungsquelle legt fest das über den Anschlüssen die festgelegte Spannung herrscht. 
 Es ist egal, wie gross die Last ist. 
-Die Spannung bleibt gleich.\\
-Es gibt verschiedene Symbole:\\
+Die Spannung bleibt gleich.
+
+Es gibt verschiedene Symbole:
+
 \begin{center}
     \input{circuits/spannungsquellen.tex}
     \begin{itemize}
-        \item \textbf{Typ 1} stellt eine Batterie dar. Durch das Symbol ist klar welche Polarität herrscht. Dh kann nur eine Spannung ohne Spannungspfeil gezeichnet werden.
-        \item \textbf{Typ 2} ist die Europäische Darstellungsart. Sie ist weniger gebräuchlich da zwingend immer ein Pfeil mit der Spannung gezeichnet werden muss.
-        \item \textbf{Typ 3} ist die Amerikanische Variante. Sie ist die gebräuchlichste Variante da die Polarität auch klargestellt ist.
+        \item \textbf{Typ 1} stellt eine Batterie dar. Durch das Symbol ist klar, welche Polarität herrscht. Daher kann nur eine Spannung ohne Spannungspfeil gezeichnet werden.
+        \item \textbf{Typ 2} ist die europäische Darstellungsart. Sie ist weniger gebräuchlich da zwingend immer ein Pfeil mit der Spannung gezeichnet werden muss.
+        \item \textbf{Typ 3} ist die amerikanische Variante. Sie ist die gebräuchlichste Variante da die Polarität auch klargestellt ist.
     \end{itemize}
 \end{center}
 
 \subsubsection{Stromquelle}
 
-Eine Ideale Stromquelle legt fest das durch das Symbol der festgelegte Stom fliesst. 
-Es ist egal wie gross die Last ist. 
-Der Strom fliesst durch.\\
-Es gibt verschiedene Symbole:\\
+Eine Ideale Stromquelle legt fest das durch das Symbol der festgelegte Strom fliesst. 
+Es ist egal, wie gross die Last ist. 
+Der Strom fliesst durch.
+
+Es gibt verschiedene Symbole:
+
 \begin{center}
     \input{circuits/Stromquellen.tex}
 \end{center}
 
 \begin{itemize}
-    \item \textbf{Typ 1} ist die Europäische Darstellungsart. Sie braucht ein Strompfeil da die Richtung des Stromes nicht definiert ist.
+    \item \textbf{Typ 1} ist die europäische Darstellungsart. Sie braucht ein Strompfeil da die Richtung des Stromes nicht definiert ist.
     \item \textbf{Typ 2} braucht auch ein Strompfeil, aber nicht sehr gebräuchlich.
     \item \textbf{Typ 3} ist die amerikanische Art und am gebräuchlichsten da die Stromrichtung schon definiert ist.
 \end{itemize}
@@ -47,40 +51,46 @@ Es gibt verschiedene Symbole:\\
 \subsubsection{Aussage ob Quelle oder keine Quelle}
 
 Die obigen Quellen sagen lediglich aus, ob eine Spannung oder ein Strom an einem Punkt existiert. 
-Ob die Quelle schlussendlich wirklich eine Quelle ist, daher Energie ins System liefert, muss durch abgleich mit der korrespondierenden Spannung / Strom über der Quelle (siehe Kapitel \ref{source_sink}).\\
+Ob die Quelle schlussendlich wirklich eine Quelle ist, daher Energie ins System liefert, muss durch einen Abgleich mit der korrespondierenden Spannung / Strom über der Quelle (siehe Kapitel \ref{source_sink}).\\
 
 \subsubsection{Widersprüche}
 
-Es gibt Widersprüche welche durch die obigen Quellen entstehen können:\\
+Es gibt Widersprüche welche durch die obigen Quellen entstehen können:
+
 \begin{center}
     \input{circuits/Widersprüche.tex}
 \end{center}
 
-Die beiden obigen Schaltungen sind Widersprüchlich, hervorgerufen durch (oder fehlenen) roten idealen Verbindungen.\\ 
+Die beiden obigen Schaltungen sind widersprüchlich, hervorgerufen durch (oder fehlenden) roten idealen Verbindungen.
+
 In Schaltung 1 sind die beiden Pole einer Idealen Spannungsquelle verbunden. 
 Allerdings ist sie Spannung grösser als 0. 
 Die Spannung kann nicht grösser als 0 sein, aber an beiden Polen gleich. 
-Ein Widerspruch.\\
+Ein Widerspruch.
+
 In Schaltung 2 erzeugt die ideale Stromquelle ein Strom der grösser ist als 0, dieser kann allerdings nicht fliessen da keine Verbindung vorhanden ist. 
-Ein Widerspruch.\\
+Ein Widerspruch.
 
 \subsection{Gesteuerte Quellen}
 
 In der Elektrotechnik viel gebrauchte Elemente sind sogenannte gesteuerte Quellen. 
 Sie haben eine Messgrösse, welcher dann mit dem Steuerparameter multipliziert wird und dann als Ausgangsgrösse ausgegeben wird. 
 Die Messgrösse und Ausgangsgrösse kann entweder Spannung oder Strom sein. 
-Daher gibt es 4 verschiedene Arten Gesteuerte Quellen.\\
+Daher gibt es 4 verschiedene Arten gesteuerte Quellen.
+
 \begin{itemize}
     \item Spannungsgesteuerte Spannungsquelle (VCVS)
     \item Spannungsgesteuerte Stromquelle (VCCS)
     \item Stromgesteuerte Spannungsquelle (CCVS)
     \item Stromgesteuerte Stromquelle (CCCS)
 \end{itemize}
+
 Der Steuerparameter der VCVS und CCCS sind einheitenlose Grössen, welche meist mit Symbolen wie $g, v, r  \text{ oder } \gamma$ bezeichnet. 
-Die Steuerparameter der VCCS und CCVS müssen die Messgrösse in die Ausgangsgrösse umwandeln und haben dadurch eine Einheit.\\
-$\text{VCCS} \xrightarrow{} \unit{\ohm}$\\
-$\text{CCVS} \xrightarrow{} \unit{\siemens}$\\
-Symbole und dessen Messklemmen:\\
+Die Steuerparameter der VCCS und CCVS müssen die Messgrösse in die Ausgangsgrösse umwandeln und haben dadurch eine Einheit.
+
+\[\text{VCCS} \xrightarrow{} \unit{\ohm}\]
+\[\text{CCVS} \xrightarrow{} \unit{\siemens}\]
+Symbole und dessen Messklemmen:
 
 \begin{center}
 \begin{tabular}{|c||c|}\hline
@@ -101,9 +111,9 @@ Mann kann eine lineare Quelle mit einer Spannungs- oder Stromquelle realisieren.
 Man unterscheidet dabei zwischen einer Thévenin oder einer Norton Quelle. 
 Lineare Quellen haben 3 verschiedene Eigenschaften. 
 \begin{itemize}
-    \item \textbf{Leerlaufspannung} ist die Spannung welche an der Ausgangsklemme anliegt wenn keine last anliegt
-    \item \textbf{Kurzschlussstom} ist der maximale Strom welche durch einen kurzschluss an der Ausgangsklemme angelegt erzeugt werden kann
-    \item \textbf{Innenwiderstand} ist der innere Widerstand der Quelle
+    \item \textbf{Leerlaufspannung} ist die Spannung, welche an der Ausgangsklemme anliegt, wenn die Quelle nicht belastet wird
+    \item \textbf{Kurzschlussstrom} ist der maximale Strom, welche durch einen Kurzschluss an der Ausgangsklemme angelegt, erzeugt werden kann
+    \item \textbf{Innenwiderstand} ist der innere Widerstand der Quelle (vollständig vereinfacht)
 \end{itemize}
 
 Wenn 2 dieser Eigenschaften bekannt sind, kann die letzte berechnet werden da diese linear abhängig ist.
@@ -129,7 +139,7 @@ Eine Nortonquelle besteht aus einer Idealen Stromquelle und einem Widerstand in 
 Das Helmholz- / Thévenin- und das Nortontheorem sagen etwas sehr Ähnliches aus. 
 Helmholz / Thévenin stellen fest das alle Kombinationen aus linearen Widerständen und idealen Spannungsquellen auf eine Thévenin Quelle reduziert werden können. 
 Norton hat das erweitert das man auch auf eine Norton Quelle reduzieren kann. 
-Daher, wenn man eine Thévenin quelle hat, kann man diese zu einer Norton Quelle umwandeln und umgekehrt. 
+Daher, wenn man eine Thévenin Quelle hat, kann man diese zu einer Norton Quelle umwandeln und umgekehrt. 
 Dies kann sehr nützlich sein, um lineare Netzwerke zu lösen.
 
 \subsection{Superposition / Überlagerungssatz}
@@ -255,31 +265,38 @@ Mann kann sich das auch als zwingenden Ausgleich durch das Entfernen der ersten 
 Note: Das Potenzial $\varphi$ hat sich nach oben verschoben.
 
 \subsection{Widerstände}
-\begin{wrapfigure}{l}{0.1\linewidth}
+
+\begin{minipage}[c]{{0.1\columnwidth}}
     \begin{circuitikz}
         \draw(0,0) to[R,o-o,l=R] (0,1.5);
     \end{circuitikz}
     \begin{circuitikz}[american resistors]
         \draw(0,0) to[R,o-o,l=R] (0,1.5);
     \end{circuitikz}
-\end{wrapfigure}
+\end{minipage}
+\begin{minipage}[c]{{0.9\columnwidth}}
+    
+Fixe, lineare Widerstände haben typischerweise die links stehenden Schaltungssymbole.
 
-Fixe, lineare Widerstände haben typischerweise die links stehenden Schaltungssymbole.\\
-Links das Europäische(mehr gebräuchlich), rechts das Amerikanische.\\
-Es gibt verschieden elementare Schaltungen welche einfacher separat analysiert werden können.\\
+Links das Europäische(mehr gebräuchlich), rechts das Amerikanische.
+
+Es gibt verschieden elementare Schaltungen welche einfacher separat analysiert werden können.
+
+\end{minipage}
 
 \subsubsection{Serienschaltung}
 
-Wenn Widerstände in Serie zueinander stehen, können sie summiert werden.\\
+Wenn Widerstände in Serie zueinander stehen, können sie summiert werden.
+
 \begin{center}
     \input{circuits/serienschaltung.tex}
 \end{center}
     
 \[ \text{R}_\text{tot} = \sum_{\text{i}=1}^{\text{n}} \text{R}_\text{i}\]
 
-\subsubsection{Paralellschaltung}
+\subsubsection{Parallelschaltung}
 
-Wenn Widerstände parallel zueinander stehen, können ihre Leitwerte zusammengezählt werden.\\
+Wenn Widerstände parallel zueinander stehen, können ihre Leitwerte zusammengezählt werden.
 
 \begin{center}
     \input{circuits/paralellschaltung.tex}
@@ -287,19 +304,20 @@ Wenn Widerstände parallel zueinander stehen, können ihre Leitwerte zusammengez
 
 \[ \text{R}_\text{tot} = \frac{1}{\sum_{\text{i}=1}^{\text{n}} \frac{1}{\text{R}_\text{i}}} \]
 
-Wenn \textbf{nur 2} Widerstände paralell stehen, kann folgende vereinfachte Formel verwendet werden: $\frac{\text{R1}\cdot\text{R2}}{\text{R1}+\text{R2}}$\\
+Wenn \textbf{nur 2} Widerstände parallel stehen, kann folgende vereinfachte Formel verwendet werden: 
+$\frac{\text{R1}\cdot\text{R2}}{\text{R1}+\text{R2}}$
 
-\subsubsection{Stern - dreieck umwandlung}
+\subsubsection{Stern - dreieck Umwandlung}
 
-Wenn Widerstände in eine Dreieckskonstellation sind, kann man sie in einen Stern und umgekehrt umwandeln.\\
+Wenn Widerstände in eine Dreieckskonstellation sind, kann man sie in einen Stern und umgekehrt umwandeln.
 
-\begin{minipage}[b]{0.55\linewidth}
+\begin{minipage}[b]{0.5\linewidth}
     \centering
 
     \input{circuits/dreieck zu stern.tex}
 
-\end{minipage}%%
-\begin{minipage}[b]{0.45\linewidth}
+\end{minipage}
+\begin{minipage}[b]{0.5\linewidth}
     \centering
     \[
     \begin{aligned}
@@ -310,15 +328,16 @@ Wenn Widerstände in eine Dreieckskonstellation sind, kann man sie in einen Ster
     \]
 
     \vspace{4ex}
-\end{minipage} 
-\begin{minipage}[b]{0.55\linewidth}
+\end{minipage}
+
+\begin{minipage}[b]{0.5\linewidth}
     \centering
 
     \input{circuits/stern zu dreiek.tex}
 
     \vspace{4ex}
-\end{minipage}%% 
-\begin{minipage}[b]{0.45\linewidth}
+\end{minipage}
+\begin{minipage}[b]{0.5\linewidth}
     \centering
     \[
     \begin{aligned}
@@ -331,15 +350,16 @@ Wenn Widerstände in eine Dreieckskonstellation sind, kann man sie in einen Ster
     \vspace{4ex}
 \end{minipage} 
 
-
-\subsection{Symetrien in Widerstandsnetzwerken}
+\subsection{Symmetrien in Widerstandsnetzwerken}
 
 Symmetrien können beim Lösen von Widerstandsnetzwerken nützlich sein da komplette Netzwerke nur einmal zusammengefasst werden müssen. 
-Dabei ist das Äquipotentialprinzip sehr wichtig da ein Widerstand, der auf der Symmetrielinie liegt, aufgeteilt werden darf. 
-Dabei ist es egal ob in paralell oder in serie. 
-Voraussetzung ist das Gleiche Widerstandswerte vorligen.
+Dabei ist das Äquipotential Prinzip sehr wichtig da ein Widerstand, der auf der Symmetrielinie liegt, aufgeteilt werden darf. 
+Dabei ist es egal ob in parallel oder in Serie. 
+Voraussetzung ist das Gleiche Widerstandswerte Vorligen.
 
-\input{circuits/Symetrien.tex}
+\begin{center}
+    \input{circuits/Symetrien.tex}
+\end{center}
 
 Nun können beide Seiten separat angeschaut werden. 
 Da beide Seiten identisch sind, kann nur eine Seite berechnet und der resultierende Wert halbiert werden. 

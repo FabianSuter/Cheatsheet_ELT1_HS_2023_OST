@@ -1,6 +1,7 @@
 \section{Systematische Netzwerkanalyse}
 
-{\color{red}Wichtiger Grundsatz}\\
+{\color{red}Wichtiger Grundsatz}
+
 Das zu analysierende Netzwerk \textbf{MUSS} linear sein. 
 Ansonsten kann das Netzwerk nicht mit den folgenden Methoden analysiert werden.
 Grundsätzlich solle das zu analysierende Netzwerk immer zuerst maximal vereinfacht werden da dies meist zu weniger Aufwand führt. 
@@ -24,7 +25,7 @@ Für systematische Netzwerkanalyse müssen ein paar Grundbegriffe geläufig sein
     \item \textbf{Spannbaum} : Ein weg welcher alle Knoten miteinander verbindet
     \item \textbf{Zyklus} : Ein weg welcher im gleichen Knoten beginnt und endet
     \item \textbf{Kreis} : Ein Zyklus welcher keinen Knoten zweimal enthält
-    \item \textbf{Masche} : Ein Kreis welche Keine inneren oder äussere Zweige aufweisst.
+    \item \textbf{Masche} : Ein Kreis welche Keine inneren oder äussere Zweige aufweist.
 \end{itemize}
 
 \begin{center}
@@ -47,19 +48,22 @@ Bei der Zweigstrommethode wird das Ohmsche und die beiden krichhoffschen Gesetze
 
 \subsubsection{Zweiggleichungen}
 
-Anzahl: z - i - v\\
+Anzahl: z - i - v
+
 Ohmsches Gesetz anwenden. 
 Darauf achten das keine Brüche vorkommen
 
 \subsubsection{Stromgleichungen}
 
-Anzahl: k - 1\\
+Anzahl: k - 1
+
 Kirchhoff current law umsetzen. 
 Bekannte quellen nach links nehmen.
 
 \subsubsection{Spannungsgleichungen}
 
-Anzahl: z - k + 1\\
+Anzahl: z - k + 1
+
 Kirchhoff voltage law anwenden. 
 Bekannte Quellen auf die linke Seite nehmen.
 
@@ -77,10 +81,12 @@ Ein Knoten könnte man sparen, allerdings bleibt der Rechenaufwand gleich.
 \begin{center}
     \input{circuits/Beispiel Zweigstrommethode.tex}
 \end{center}
-$U_q$ und $I_q$ gegeben\\
-Knoten : 4, Zweige : 5\\
+$U_q$ und $I_q$ gegeben
 
-\textbf{Zweiggleichungen:}\\
+Knoten : 4, Zweige : 5
+
+\textbf{Zweiggleichungen:}
+
 z - v - i = 5 - 1 - 1 = 3
 
 \[
@@ -89,7 +95,8 @@ U_2 = R_2 \cdot I_2\\
 U_3 = R_3 \cdot I_3
 \]
 
-\textbf{Stromgleichungen:}\\
+\textbf{Stromgleichungen:}
+
 k - 1 = 4 - 1 = 3 
 
 \[
@@ -98,7 +105,7 @@ I_q = I_3\\
 0 = I_1 - I_0
 \]
 
-\textbf{Spannungsgleichungen:}\\
+\textbf{Spannungsgleichungen:}
 
 z - k + 1 = 5 - 4 + 1 = 2
 
@@ -107,7 +114,7 @@ U_q = U_1 + U_2\\
 0 = U_2 + U_3 + U_4
 \]
 
-\textbf{Einsetze der Zweiggleichungen:}
+\textbf{einsetzen der Zweiggleichungen:}
 
 \[
 U_q = R_1 \cdot I_1 + R_2 \cdot I_2\\
@@ -117,7 +124,7 @@ I_q = I_3\\
 0 = I_1 - I_0
 \]
 
-\textbf{Tablo erstellen:}
+\textbf{Matrix erstellen:}
 
 \[
 \begin{bmatrix}
@@ -146,7 +153,7 @@ I_q = I_3\\
 
 \subsection{Maschenstrom-/Kreisstrommethode}
 
-\textbf{Aufwand} : M - 1 - i\\
+\textbf{Aufwand} : M - 1 - i
 
 Bei der Kreisstrommethode werden verschiedene Kreisströme als unbekannte definiert. 
 Liegen diese auf Maschen spricht man von der Maschentrommethode. 
@@ -165,7 +172,7 @@ Das darf keine Überschneidungen der Zweige geben.
 \begin{enumerate}
     \item Knoten definieren
     \item Stammbaum definieren\\
-    {\color{red}\textbf{Es darf keine Ideale Stromquelle im Pfad des Stammbaums sein}}
+    {\color{red}\textbf{Es darf keine Ideale Stromquelle im Pfad des Stammbaums sein!}}
     \item Matrix einfüllen:
 \end{enumerate}
 
@@ -188,18 +195,18 @@ Das darf keine Überschneidungen der Zweige geben.
     \end{bmatrix}$
     \\
 \end{tabular}
-\\
+
 Die Matrix ist grundsätzlich Symmetrisch an der diagonalen. 
 In der Diagonalen sind die Summen aller Widerstände im Pfad der Kreisströme. 
 Alle Überlagerungen welche durch verschiedene Kreisströme durch denselben Widerstand entstehen, werden jeweils oberhalb und unterhalb davon notiert. 
 Diese sind \textbf{negativ}. 
 Entgegengesetzte Richtung \say{-} sonst \say{+}. 
 Gesteuerte Quellen brechen diese Symetrie.
-Wenn Kreisströme nicht unabhängig definiert sind müssen sie trotzdem als Störfaktoren mit einbezogen werden. 
+Wenn Kreisströme nicht unabhängig definiert sind, müssen sie trotzdem als Störfaktoren mit einbezogen werden. 
 Diese können in den Quellenvektor genommen werden. 
 Falls basierend auf vorherige Grössen können sie in die Matrix genommen werden.
 
-\subsubsection{Eifaches Beispiel ohne gesteuerte Quellen}
+\subsubsection{Einfaches Beispiel ohne gesteuerte Quellen}
 
 \begin{center}
     \input{circuits/Beispiel Maschenstrommethode 1.tex}
@@ -221,8 +228,6 @@ Falls basierend auf vorherige Grössen können sie in die Matrix genommen werden
     J_5\\
 \end{bmatrix}
 =
-\]
-\[
 \begin{bmatrix}
     \cdot\\
     R_1\cdot I_c - U_6\\
@@ -234,17 +239,21 @@ Falls basierend auf vorherige Grössen können sie in die Matrix genommen werden
 
 \subsubsection{2. Beispiel mit gesteuerten Quellen}
 
-\begin{center}
-    \input{circuits/Beispiel Maschenstrommethode 2.tex}
-\end{center}
+\begin{minipage}[t]{0.49\linewidth}
+    \vspace*{0pt}
+    \begin{center}
+        \input{circuits/Beispiel Maschenstrommethode 2.tex}
+    \end{center}
+\end{minipage}
+\begin{minipage}[t]{0.49\linewidth}
 
-Vorbereitungsgleichungen:\\
+Vorbereitungsgleichungen:
+
 \begin{align*}
     J_1 &= -I_q\\
     J_2 &= I_s\\
     J_4 &= -g\cdot U_s = -g\cdot R_2 \cdot (J_1 - J_2) = g\cdot R_2\cdot (I_q + J_2)\\ 
 \end{align*}
-
 
 gesucht sind $_J2$ \& $J_3$
 
@@ -280,14 +289,16 @@ Vereinfachen:
     -I_q \cdot R_1 + g \cdot R_2 \cdot R_4 \cdot I_q \\
 \end{pmatrix}
 \]
-Überprüfen ob in der Matrix nur Widerstände stehen und im Quellvektor nur Spannunen. 
+Überprüfen ob, in der Matrix nur Widerstände stehen und im Quellvektor nur Spannungen. 
+
+\end{minipage}
 
 \subsection{Knotenpotentialmethode}
 
-\textbf{Aufwand:} k - 1 - v\\
+\textbf{Aufwand:} k - 1 - v
 
 Bei der Knotenpotentialmethode wird implizit KCL verwendet. 
-Es werden Knoten definiert, welche in den Unekanntenvektor eingefüllt werden. 
+Es werden Knoten definiert, welche in den Unbekanntenvektor eingefüllt werden. 
 Ein Knoten wird als \say{0} definiert. 
 Dieser wird nicht in den Vektor eingefügt.
 Die Matrix enthält nur Leitwerte.
@@ -301,81 +312,87 @@ Sie müssen verschoben werden wie im Kapitel \ref{Quelln verschieben} gezeigt.
 
 \subsubsection{Beispiel}
 
-\begin{center}
+\begin{minipage}[t]{0.5\linewidth}
+    \vspace*{0pt}
     \input{circuits/Beispiel Knotenpotentialmethode Schritt 1.tex}
-\end{center}
-
-Vorbereitung:
-
-\begin{align*}
-    U_3 &= -U_q\\
-    U_4 &= U_1 - r\cdot I_s\\
-    I_s &= \frac{1}{R_3} \cdot (U_2 - U_3)\\
-    U_s &= U_2\\
-\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+    Vorbereitung:
+    \begin{align*}
+        U_3 &= -U_q\\
+        U_4 &= U_1 - r\cdot I_s\\
+        I_s &= \frac{1}{R_3} \cdot (U_2 - U_3)\\
+        U_s &= U_2\\
+    \end{align*}
+\end{minipage}
 
 Verschieben der Spannungsquellen:
 
-\begin{center}
-    \input{circuits/Beispiel Knotenpotentialmethode Schritt 2.tex}
-\end{center}
+\begin{minipage}[t]{0.5\linewidth}
+    \vspace*{0pt}
+    \begin{center}
+        \input{circuits/Beispiel Knotenpotentialmethode Schritt 2.tex}
+    \end{center}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+    \[
+    \begin{bmatrix}
+        \frac{1}{R_1} + \frac{1}{R_4} & \cdot \\
+        \cdot & \frac{1}{R_2} + \frac{1}{R_3} \\
+    \end{bmatrix}
+    \begin{pmatrix}
+        U_1\\
+        U_2\\
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        I_q - \overbrace{-\frac{r\cdot I_s}{R_4}}^{\frac{r \cdot \frac{1}{R_3}(U_2 - U_3)}{R_3\cdot R_4}} - \overbrace{g\cdot U_s}^{g \cdot U_2}\\
+        -I_q - \frac{U_q}{R_3}\\
+    \end{pmatrix}
+    \]
+    vereinfachen:
+    \[
+    \begin{bmatrix}
+        \frac{1}{R_1} + \frac{1}{R_4} & -\frac{r}{R_3\cdot R_4}-g \\
+        \cdot & \frac{1}{R_2} + \frac{1}{R_3} \\
+    \end{bmatrix}
+    \begin{pmatrix}
+        U_1\\
+        U_2\\
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+        I_q\\
+        -I_q - \frac{U_q}{R_3}\\
+    \end{pmatrix}
+    \]
 
-\[
-\begin{bmatrix}
-    \frac{1}{R_1} + \frac{1}{R_4} & \cdot \\
-    \cdot & \frac{1}{R_2} + \frac{1}{R_3} \\
-\end{bmatrix}
-\begin{pmatrix}
-    U_1\\
-    U_2\\
-\end{pmatrix}
-=
-\begin{pmatrix}
-    I_q - \overbrace{-\frac{r\cdot I_s}{R_4}}^{\frac{r \cdot \frac{1}{R_3}(U_2 - U_3)}{R_3\cdot R_4}} - \overbrace{g\cdot U_s}^{g \cdot U_2}\\
-    -I_q - \frac{U_q}{R_3}\\
-\end{pmatrix}
-\]
-vereinfachen:
-\[
-\begin{bmatrix}
-    \frac{1}{R_1} + \frac{1}{R_4} & -\frac{r}{R_3\cdot R_4}-g \\
-    \cdot & \frac{1}{R_2} + \frac{1}{R_3} \\
-\end{bmatrix}
-\begin{pmatrix}
-    U_1\\
-    U_2\\
-\end{pmatrix}
-=
-\begin{pmatrix}
-    I_q\\
-    -I_q - \frac{U_q}{R_3}\\
-\end{pmatrix}
-\]
+    Kontrolle: Matrix enthält nur Leitwert und Quellvektor nur Ströme.
+\end{minipage}
 
-Kontrolle: Matrix enthält nur Leitwert und Quellvektor nur Ströme.
 
 \subsection{Modifizierte Knotenpotentialmethode}
 
-\textbf{Aufwand:} K - 1 + v + s (s sind gesuchte grössen)\\
+\textbf{Aufwand:} K - 1 + v + s (s sind gesuchte Grössen)
 
 Die modifizierte Knotenpotentialmethode ist die allgemeinere Form der kpm. 
 Mit dieser kann jedes Netzwerk ohne vorherige Veränderung analysiert werden. 
 Die Matrix der kpm erhält lediglich mehr Variablen. 
 Zu der aufgestellten Matrix der kpm werden für die Ströme in idealen Spannungsquellen, gesuchte Ströme und Ströme in Spulen eine zusätzliche Variable ermittelt.  
 Für diese muss dann auch eine zusätzliche Gleichung aufgestellt werden. 
-Für Ideale Spannungsquellen wird der Strom generell hinei ndefiniert.
+Für Ideale Spannungsquellen wird der Strom generell hineindefiniert.
 Im Allgemeinen kann die Matrix auch mit Elementstempel aufgestellt werden.
 Diese sind für alle Elemente definiert, die in einer Schaltung vorkommen. 
 
-\subsubsection{elementstempel}
+\subsubsection{Elementstempel}
 
 Jedes Bauteil in einer zu analysierenden Schaltung fügt bestimmte Teile in eine Matrix / Quellvektor hinzu. 
 Da diese immer gleich sind, können diese nach folgendem Muster 1:1 hinzugefügt werden. 
 Für Abhängige Grössen wird jeweils eine weitere Gleichung gebraucht welche mit a (auxiliary) benannt wird.  
 
-\begin{minipage}[c]{0.49\linewidth}
-    \subsubsection{Widerstand}
+\begin{minipage}[t]{0.49\linewidth}
 
+    \subsubsection{Widerstand}
     \begin{center}
 
         \input{circuits/Elementstempel Widerstand.tex}
@@ -392,48 +409,45 @@ Für Abhängige Grössen wird jeweils eine weitere Gleichung gebraucht welche mi
         \end{tabular}
     \end{center}
 
-   \subsubsection{Unabhängige Stromquelle}
-
-   \begin{center}
-
-        \input{circuits/Elementstempel unabhängige Stromquelle.tex}
-
-        \begin{tabular}{c|c|c}
-           & m & n \\\hline
-            m & $\cdot$ & $\cdot$\\\hline
-            n & $\cdot$ & $\cdot$\\
-        \end{tabular}
-        \begin{tabular}{|c|}
-            q vec.\\\hline
-            $-I_q$\\\hline
-            $+I_q$\\
-        \end{tabular}   
-    \end{center}
-
-    \subsubsection{Widerstand mit gesuchtem Strom}
-
+    \subsubsection{Unabhängige Stromquelle}
     \begin{center}
+ 
+         \input{circuits/Elementstempel unabhängige Stromquelle.tex}
+ 
+         \begin{tabular}{c|c|c}
+            & m & n \\\hline
+             m & $\cdot$ & $\cdot$\\\hline
+             n & $\cdot$ & $\cdot$\\
+         \end{tabular}
+         \begin{tabular}{|c|}
+             q vec.\\\hline
+             $-I_q$\\\hline
+             $+I_q$\\
+         \end{tabular}   
+     \end{center}
 
-        \input{circuits/Elementstempel Widerstand mit gesuchtem Strom.tex}
+     \subsubsection{Widerstand mit gesuchtem Strom}
+     \begin{center}
+ 
+         \input{circuits/Elementstempel Widerstand mit gesuchtem Strom.tex}
+ 
+         \[a: U_m - U_n = -R  I_s = 0\]
+ 
+         \begin{tabular}{c|c|c|c}
+             & m & n & $I_s$\\\hline
+             m & $\cdot$ & $\cdot$ & 1 \\\hline
+             n & $\cdot$ & $\cdot$ & -1\\\hline
+             a & 1 & -1 & -R
+         \end{tabular}
+         \begin{tabular}{|c|}
+             q vec.\\\hline
+             $\cdot$\\\hline
+             $\cdot$\\\hline
+             0
+         \end{tabular}
+     \end{center}
 
-        \[a: U_m - U_n = -R  I_s = 0\]
-
-        \begin{tabular}{c|c|c|c}
-            & m & n & $I_s$\\\hline
-            m & $\cdot$ & $\cdot$ & 1 \\\hline
-            n & $\cdot$ & $\cdot$ & -1\\\hline
-            a & 1 & -1 & -R
-        \end{tabular}
-        \begin{tabular}{|c|}
-            q vec.\\\hline
-            $\cdot$\\\hline
-            $\cdot$\\\hline
-            0
-        \end{tabular}
-    \end{center}
-
-    \subsubsection{Unabhängigeige Spannungsquelle}
-
+    \subsubsection{Unabhängige Spannungsquelle}
     \begin{center}
 
         \input{circuits/Elementstempel unabhängige Spannungsquelle.tex}
@@ -453,9 +467,7 @@ Für Abhängige Grössen wird jeweils eine weitere Gleichung gebraucht welche mi
             $U_q$
         \end{tabular}
     \end{center}
-\end{minipage}
-\hfill\vline\hfill
-\begin{minipage}[c]{0.49\linewidth}
+
     \subsubsection{Spannungsgesteuerte Spannungsquelle}
     \begin{center}
 
@@ -486,6 +498,10 @@ Für Abhängige Grössen wird jeweils eine weitere Gleichung gebraucht welche mi
 
     \end{center}
 
+\end{minipage}%
+\hfill\vline\hfill
+\begin{minipage}[t]{0.49\linewidth}
+
     \subsubsection{Spannungsgesteuerte Stromquelle}
     \begin{center}
 
@@ -513,9 +529,7 @@ Für Abhängige Grössen wird jeweils eine weitere Gleichung gebraucht welche mi
         \end{tabular}
 
     \end{center}
-\end{minipage}
 
-\begin{minipage}[c]{0.49\linewidth}
     \subsubsection{Stromgesteuerte Spannungsquelle}
     \begin{center}
 
@@ -540,9 +554,7 @@ Für Abhängige Grössen wird jeweils eine weitere Gleichung gebraucht welche mi
             $\cdot$ \\
         \end{tabular}
     \end{center}
-\end{minipage}
-\hfill\vline\hfill
-\begin{minipage}[c]{0.49\linewidth}
+
     \subsubsection{Stromgesteuerte Stromquelle}
     \begin{center}
 

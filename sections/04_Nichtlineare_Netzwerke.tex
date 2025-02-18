@@ -1,22 +1,27 @@
-\section{Nichtlineare Netzwerke / Leistungsanpassung}
+\section{Nicht lineare Netzwerke / Leistungsanpassung}
 
+\begin{minipage}[t]{{0.1\linewidth}}
+    \vspace*{0pt}
+    \begin{center}
+        \begin{circuitikz}
+            \draw (0,0) to[R] (0,1.5);
+            \draw [short] (0.25,1.25) -- (0.25,1);
+            \draw [short] (0.25,1) -- (-0.25,0.5);
+            \draw [short] (-0.25,0.5) -- (-0.25,0.25);   
+        \end{circuitikz}
+    \end{center}
+\end{minipage}%
+\begin{minipage}[t]{{0.9\linewidth}}
+    Viele Netzwerke sind in der Praxis nicht linear.
 
+    Meistens wird dabei ein nicht linearen Widerstand verwendet, um diesen Effekt zu modellieren.
 
-\begin{wrapfigure}{l}{0.1\linewidth}
-    \begin{circuitikz}
-        \draw (0,0) to[R] (0,1.5);
-        \draw [short] (0.5,1.5) -- (0.5,1);
-        \draw [short] (0.5,1) -- (-0.5,0.5);
-        \draw [short] (-0.5,0.5) -- (-0.5,0);   
-    \end{circuitikz}     
-\end{wrapfigure}
+    Das links stehende Schemasymbol wird dabei verwendet.
 
-Viele Netzwerke sind in der Praxis nicht linear.\\
-Meistens wird dabei ein nicht linearen Widerstand verwendet, um diesen Effekt zu modellieren.\\
-Das links stehende Schemasymbol wird dabei verwendet.\\
-Die Änderung des Widerstandswertes durch einen Effekt wie zum Beispiel Temperatur, licht oder mechanische Einwirkung herbeigeführt wird können Symbole diesen Effekt signalisieren. 
-Symbole wie z.B. Pfeile oder ein Temperatursymbol.\\ 
-
+    Die Änderung des Widerstandswertes durch einen Effekt wie zum Beispiel Temperatur, licht oder mechanische Einwirkung herbeigeführt wird können Symbole diesen Effekt signalisieren. 
+    
+    Symbole wie z.B. Pfeile oder ein Temperatursymbol.
+\end{minipage}
 
 \subsection{Leistungsanpassung}
 
@@ -31,7 +36,7 @@ Im Lineraren Fall entspricht der Lastwiderstand dem Innenwiderstand der Quelle.
         \begin{tcolorbox}[colframe=violet , colback=white, arc is curved, hbox]
             $R_l^\ast = R_i$
         \end{tcolorbox}
-        Maximale leistung, $\eta=50\%$\\
+        maximale leistung, $\eta=50\%$\\
         Der Stern am $R_l$ signalisiert, dass Leistungsanpassung gemacht wurde. 
     \end{center}
 \end{minipage}
@@ -59,5 +64,5 @@ Im Lineraren Fall entspricht der Lastwiderstand dem Innenwiderstand der Quelle.
     R_i &= R_l
 \end{align*}
 
-Im falle eines nicht linearen Widerstands muss eine Formel für die Leistung über dem Lastwiderstand gefunden werden. 
+Im falle eines nicht linearen Widerstands, muss eine Formel für die Leistung über dem Lastwiderstand gefunden werden. 
 Die gefundene Formel muss dann abgeleitet und null gesetzt werden, ähnlich wie in der Herleitung.
