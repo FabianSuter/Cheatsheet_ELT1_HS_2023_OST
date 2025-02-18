@@ -23,8 +23,8 @@ Symbole wie z.B. Pfeile oder ein Temperatursymbol.\\
 Leistungsanpassung beschreibt das Verfahren ein Widerstand an einer realen Quelle anzupassen, sodass die maximal mögliche Energie aus der Quelle fliesst. 
 Im Lineraren Fall entspricht der Lastwiderstand dem Innenwiderstand der Quelle. 
 
-\begin{multicols*}{2}
-    
+
+\begin{minipage}[c]{0.49\linewidth}
     \input{circuits/Leistungsanpassung thevenin.tex}
 
     \begin{center}
@@ -34,11 +34,11 @@ Im Lineraren Fall entspricht der Lastwiderstand dem Innenwiderstand der Quelle.
         Maximale leistung, $\eta=50\%$\\
         Der Stern am $R_l$ signalisiert, dass Leistungsanpassung gemacht wurde. 
     \end{center}
-
-
-    \newcolumn
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[c]{0.49\linewidth}
     \input{tikz/Leistungsanpassung.tex}
-\end{multicols*}
+\end{minipage}
 
 \subsubsection{Herleitung des optimalen Lastwiderstands einer linearen Stromquelle}
 

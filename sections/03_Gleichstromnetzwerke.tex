@@ -170,7 +170,7 @@ Die Quellgrösse, welche im veränderten Netzwerk angelegt wird, ist aber nicht 
 
 \subsubsection{Herleitung mit Spannungsquelle}
 
-\begin{multicols*}{2}
+\begin{minipage}[t]{0.49\linewidth}
     \begin{center}
         \input{circuits/reziprokes Netzwerk V 1.tex}
     \end{center}
@@ -179,8 +179,9 @@ Die Quellgrösse, welche im veränderten Netzwerk angelegt wird, ist aber nicht 
         I_1 &= \frac{U_q R_2}{\left(R_1 + \frac{R_2(R_3 + R_4)}{R_1 + R_3 + R_4}\right)\left(R_2 + R_3 + R_4\right)}\\
         I_1 &= \frac{U_q R_2}{R_1(R_1 + R_3 + R_4) + R_2(R_3 + R_4)}
     \end{align*}
-    \newcolumn
-
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.49\linewidth}
     \begin{center}
         \input{circuits/reziprokes Netzwerk V 2.tex}
     \end{center}
@@ -189,25 +190,25 @@ Die Quellgrösse, welche im veränderten Netzwerk angelegt wird, ist aber nicht 
         I_2 &= \frac{U_q R_2}{\left(\frac{R_1 R_2}{R_1 + R_2} + R_3 + R_4 \right)(R_1 + R_2)}\\
         I_2 &= \frac{U_q R_2}{R_1 R_2 + R_3 (R_1 + R_2) + R_4(R_1 + R_2)}
     \end{align*}
+\end{minipage}
 
-\end{multicols*}
+
 \begin{center}
     $R_1 R_2 + R_1 R_3 + R_1 R_4 + R_2 R_3 + R_2 R_4 \mathcolor{red}{=} R_1 R_2 + R_1 R_3 + R_1 R_4 + R_2 R_3 + R_2 R_4$
 \end{center}
 
 \subsubsection{Herleitung mit Stromquelle}
 
-\begin{multicols*}{2}
-    \begin{center}
-        \input{circuits/reziprokes Netzwerk I 1.tex}
-    \end{center}
+\begin{minipage}[c]{0.49\linewidth}
+    \input{circuits/reziprokes Netzwerk I 1.tex}
     \[U_1 = I_q \frac{R_2}{R_2 + R_3 + R_4} R_4\]
-    \newcolumn
-
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[c]{0.49\linewidth}
     \input{circuits/reziprokes Netzwerk I 2.tex}
     \[U_2 = I_q \frac{R_4}{R_2 + R_3 + R_4} R_2\]
+\end{minipage}
 
-\end{multicols*}
 \begin{center}
     $U_1 = U_2$\\
     \begin{tcolorbox}[colframe=red , colback=white, arc is curved, hbox]
