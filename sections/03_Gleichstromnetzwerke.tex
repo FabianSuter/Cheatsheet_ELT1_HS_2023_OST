@@ -112,17 +112,17 @@ Symbole und dessen Messklemmen:
 \subsection{Lineare Quellen}
 
 Eine lineare Quelle besteht aus einer Idealen Quelle und einem (linearen) Widerstand. 
-Die Spannung der Quelle verhält sich linear zu dem Strom, der aus der Quelle fliesst. 
-Mann kann eine lineare Quelle mit einer Spannungs- oder Stromquelle realisieren. 
-Man unterscheidet dabei zwischen einer Thévenin oder einer Norton Quelle. 
-Lineare Quellen haben 3 verschiedene Eigenschaften. 
+Die Spannung der Quelle verhält sich linear zum Strom, der aus der Quelle fliesst. 
+Man kann eine lineare Quelle mit einer Spannungs- oder Stromquelle realisieren und unterscheidet dabei zwischen einer Thévenin- oder Norton-Quelle.
+
+Lineare Quellen haben 3 verschiedene Eigenschaften:
 \begin{itemize}
-    \item \textbf{Leerlaufspannung} ist die Spannung, welche an der Ausgangsklemme anliegt, wenn die Quelle nicht belastet wird
-    \item \textbf{Kurzschlussstrom} ist der maximale Strom, welche durch einen Kurzschluss an der Ausgangsklemme angelegt, erzeugt werden kann
+    \item \textbf{Leerlaufspannung} ist die Spannung, welche an den Ausgangsklemmen anliegt, wenn die Quelle nicht belastet wird
+    \item \textbf{Kurzschlussstrom} ist der maximal Strom, welcher durch einen Kurzschluss an den Ausgangsklemmen erzeugt werden kann
     \item \textbf{Innenwiderstand} ist der innere Widerstand der Quelle (vollständig vereinfacht)
 \end{itemize}
 
-Wenn 2 dieser Eigenschaften bekannt sind, kann die letzte berechnet werden da diese linear abhängig ist.
+Wenn 2 dieser Eigenschaften bekannt sind, kann die letzte berechnet werden, da diese linear abhängig ist.
 
 \subsubsection{Thévenin Quelle}
 
@@ -140,24 +140,37 @@ Eine Nortonquelle besteht aus einer Idealen Stromquelle und einem Widerstand in 
     \input{circuits/norton quelle.tex}
 \end{center}
 
-\subsection{Helmholz, Thévenin, Norton - Theorem}
+\subsection{Helmholz-, Thévenin-, Norton-Theorem}
 
-Das Helmholz- / Thévenin- und das Nortontheorem sagen etwas sehr Ähnliches aus. 
-Helmholz / Thévenin stellen fest das alle Kombinationen aus linearen Widerständen und idealen Spannungsquellen auf eine Thévenin Quelle reduziert werden können. 
-Norton hat das erweitert das man auch auf eine Norton Quelle reduzieren kann. 
-Daher, wenn man eine Thévenin Quelle hat, kann man diese zu einer Norton Quelle umwandeln und umgekehrt. 
+Das Helmholz-, Thévenin- und Norton-Theorem sagen etwas sehr Ähnliches aus. 
+Helmholz / Thévenin stellen fest, dass alle Kombinationen aus linearen Widerständen und idealen Spannungsquellen auf eine Thévenin Quelle reduziert werden können. 
+Norton erweiterte dies auf eine Norton Quelle. 
+Daher kann eine Thévenin Quelle zu einer Norton Quelle umgewandelt werden und umgekehrt. 
 Dies kann sehr nützlich sein, um lineare Netzwerke zu lösen.
 
 \subsection{Superposition / Überlagerungssatz}
 
-Superposition ermöglicht das schrittweise Erkunden von Schaltungen durch Ausschalten von idealen Quellen bis auf eine und das anschliessende überlagern(summieren der strömen). 
-Voraussetzung ist eine Lineare Schaltung. 
-Alle passiven Bauteile bleiben immer gleich. 
-Es werden nur die Quellen verändert. 
-Wenn abhängige Quellen, welche wirklich abhängig sind, im Netzwerk vorhanden sind dann dürfen diese nicht ausgeschaltet werden und müssen immer eingeschalten bleiben. 
-Thévenin und Norton Quellen werden verschieden abgeschaltet. 
-Eine Thévenin Quellen wird zu einer idealen Verbindung (nicht kurzgeschlossen!). 
-Eine Norton Quelle wird zu einem idealen Unterbruch.
+Superposition ermöglicht das schrittweise Erkunden von Schaltungen durch Ausschalten von idealen Quellen bis auf eine und das anschliessende Überlagern (Summieren der Ströme).
+\begin{multicols}{2}
+    \begin{itemize}[]
+        \item[-] Die Schaltung muss linear sein
+        \item[-] Alle passiven Bauteile bleiben immer gleich
+        \item[-] Es werden nur die Quellen verändert
+        \item[-] Definitiv abhängige Quellen dürfen nicht ausgeschaltet werden
+    \end{itemize} 
+\end{multicols}   
+% Voraussetzung ist eine Lineare Schaltung. 
+% Alle passiven Bauteile bleiben immer gleich. 
+% Es werden nur die Quellen verändert. 
+% Wenn abhängige Quellen, welche wirklich abhängig sind, im Netzwerk vorhanden sind, dann dürfen diese nicht ausgeschaltet werden und müssen immer eingeschalten bleiben.
+
+Thévenin und Norton Quellen werden verschieden abgeschaltet:
+\begin{multicols}{2}
+    \begin{itemize}
+        \item Eine Thévenin Quellen wird zu einer idealen Verbindung (nicht kurzgeschlossen!). 
+        \item Eine Norton Quelle wird zu einem idealen Unterbruch. 
+    \end{itemize}
+\end{multicols}
 
 \begin{center}
     \input{circuits/quellen ausschalten.tex}
@@ -166,7 +179,7 @@ Eine Norton Quelle wird zu einem idealen Unterbruch.
 \subsubsection{Leistung bei Superposition}
 
 Leistung darf während dem Superpositionieren nicht separat berechnet werden. 
-Es müssen alle Quellen superponiert werden, summiert und dann darf erst Leistung berechnet werden. 
+Es müssen alle Quellen zuerst superponiert und summiert werden, dann erst darf die Leistung berechnet werden. 
 Ansonsten stimmt das Resultat nicht.
 
 \subsubsection{Beispiel}
@@ -177,9 +190,8 @@ Ansonsten stimmt das Resultat nicht.
 
 In diesem Beispiel wurden alle Quellen nacheinander ausgeschaltet und die Ströme eingezeichnet. 
 Nun können die Ströme summiert und die Leistungen bestimmt werden.
+
 \subsection{Reziprozität /Kirchhoffscher Umkehrungssatz}
-
-
 In einem Netzwerk mit nur einer realen Idealen Quelle kann die Quelle und eine Messgrösse ausgetauscht werden. 
 Das Verhältnis bleibt gleich. 
 Die Quellgrösse, welche im veränderten Netzwerk angelegt wird, ist aber nicht gleich.
@@ -232,22 +244,17 @@ Die Quellgrösse, welche im veränderten Netzwerk angelegt wird, ist aber nicht 
     \end{tcolorbox}
 \end{center}
 
-
 \subsection{Ideale Quellen verschieben}\label{Quelln verschieben}
 
-Ideale Quellen Lassen sich verschieben. 
-Für das Systematische lösen von Netzwerken kann das von Vorteil sein. 
-Allerdings ist es immer ein tradeof. 
-Man verfälscht und verliert immer Potenziale oder Ströme. 
-Mann kann sich jedoch zu Beginn eine Formel zurechtlegen, falls diese wieder interessant werden. 
-Das Verfahren für Strom und Spannungsquelle ist prinzipiell das gleiche.
-
+Ideale Quellen lassen sich verschieben. 
+Für das systematische Lösen von Netzwerken kann das von Vorteil sein, ist allerdings immer ein Trade-Off. 
+Man verfälscht und verliert immer Potenziale oder Ströme, kann sich jedoch zu Beginn Formeln zurechtlegen, falls diese wieder interessant werden. 
+Das Verfahren für Strom- und Spannungsquellen ist prinzipiell das gleiche.
 
 \subsubsection{Ideale Stromquellen}
 
-Ein virtueller Strom wird über die vorhandene Quelle gelegt. 
-Der Quellstrom wird in der Summe null. 
-Da der Strom jedoch nicht einfach so verschwindet müssen neue Stromquellen hinzugefügt werden, welche den Strom im Kreis führen:
+Ein virtueller Strom wird über die vorhandene Quelle gelegt $\rightarrow$ der Quellstrom wird in der Summe null. 
+Da der Strom jedoch nicht einfach so verschwindet, müssen neue Stromquellen hinzugefügt werden, welche den Strom im Kreis führen:
 
 \begin{center}
     \input{circuits/ideale Stromquelle verchieben.tex}
@@ -257,18 +264,16 @@ Da der Strom jedoch nicht einfach so verschwindet müssen neue Stromquellen hinz
 Das Netzwerk hat nun eine möglicherweise mühsame Stromquelle weniger, allerdings generell mehr. 
 Am besten schiebt man diese auf eine ideale Spannungsquelle, um diese ebenso zu eliminieren.
 
-
 \subsubsection{Ideale Spannungsquellen}
 
-Bei Idealen Spannungsquellen gilt dasselbe wie für ideale Stromquellen. 
-Sie werden über einen Knoten hinweg geschoben. 
-Mann kann sich das auch als zwingenden Ausgleich durch das Entfernen der ersten Spannungsquelle vorstellen.
+Bei Idealen Spannungsquellen gilt dasselbe wie für ideale Stromquellen, sie werden jedoch über einen Knoten hinweg geschoben. 
+Man kann sich das auch als zwingenden Ausgleich durch das Entfernen der ersten Spannungsquelle vorstellen.
 
 \begin{center}
     \input{circuits/ideale Spannungsquelle verschieben.tex}
 \end{center}
 
-Note: Das Potenzial $\varphi$ hat sich nach oben verschoben.
+\textit{Note: Das Potenzial $\varphi$ hat sich nach oben verschoben}
 
 \subsection{Widerstände}
 
@@ -284,9 +289,9 @@ Note: Das Potenzial $\varphi$ hat sich nach oben verschoben.
     
 Fixe, lineare Widerstände haben typischerweise die links stehenden Schaltungssymbole.
 
-Links das Europäische(mehr gebräuchlich), rechts das Amerikanische.
+Links das Europäische(gebräuchlicher), rechts das Amerikanische.
 
-Es gibt verschieden elementare Schaltungen welche einfacher separat analysiert werden können.
+Es gibt verschiedene elementare Schaltungen, welche einfacher separat analysiert werden können.
 
 \end{minipage}
 
@@ -294,28 +299,31 @@ Es gibt verschieden elementare Schaltungen welche einfacher separat analysiert w
 
 Wenn Widerstände in Serie zueinander stehen, können sie summiert werden.
 
-\begin{center}
+\begin{minipage}[c]{0.3\linewidth}
+    \[ \text{R}_\text{tot} = \sum_{\text{i}=1}^{\text{n}} \text{R}_\text{i}\]
+\end{minipage}
+\begin{minipage}[c]{0.7\linewidth}
     \input{circuits/serienschaltung.tex}
-\end{center}
-    
-\[ \text{R}_\text{tot} = \sum_{\text{i}=1}^{\text{n}} \text{R}_\text{i}\]
+\end{minipage}
 
 \subsubsection{Parallelschaltung}
 
 Wenn Widerstände parallel zueinander stehen, können ihre Leitwerte zusammengezählt werden.
 
-\begin{center}
+\begin{minipage}[c]{0.3\linewidth}
+    \[ \text{R}_\text{tot} = \frac{1}{\displaystyle\sum_{\text{i}=1}^{\text{n}} \frac{1}{\text{R}_\text{i}}} \]
+\end{minipage}
+\begin{minipage}[c]{0.7\linewidth}
+    \vspace{2mm}
     \input{circuits/paralellschaltung.tex}
-\end{center}
-
-\[ \text{R}_\text{tot} = \frac{1}{\sum_{\text{i}=1}^{\text{n}} \frac{1}{\text{R}_\text{i}}} \]
+\end{minipage}
 
 Wenn \textbf{nur 2} Widerstände parallel stehen, kann folgende vereinfachte Formel verwendet werden: 
-$\frac{\text{R1}\cdot\text{R2}}{\text{R1}+\text{R2}}$
+$\dfrac{\text{R1}\cdot\text{R2}}{\text{R1}+\text{R2}}$
 
-\subsubsection{Stern - dreieck Umwandlung}
+\subsubsection{Stern - Dreieck - Umwandlung}
 
-Wenn Widerstände in eine Dreieckskonstellation sind, kann man sie in einen Stern und umgekehrt umwandeln.
+Widerstände in einer Dreieckskonstellation können in einen Stern und umgekehrt umgewandelt werden.
 
 \begin{minipage}[b]{0.5\linewidth}
     \centering
@@ -358,14 +366,13 @@ Wenn Widerstände in eine Dreieckskonstellation sind, kann man sie in einen Ster
 
 \subsection{Symmetrien in Widerstandsnetzwerken}
 
-Symmetrien können beim Lösen von Widerstandsnetzwerken nützlich sein da komplette Netzwerke nur einmal zusammengefasst werden müssen. 
-Dabei ist das Äquipotential Prinzip sehr wichtig da ein Widerstand, der auf der Symmetrielinie liegt, aufgeteilt werden darf. 
-Dabei ist es egal ob in parallel oder in Serie. 
-Voraussetzung ist das Gleiche Widerstandswerte Vorligen.
+Symmetrien können beim Lösen von Widerstandsnetzwerken nützlich sein, da komplette Netzwerke nur einmal zusammengefasst werden müssen. 
+Dabei ist das Äquipotential-Prinzip sehr wichtig, da ein Widerstand, der auf der Symmetrielinie liegt, aufgeteilt werden darf. 
+Es ist egal, ob in Parallel oder in Serie, solange gleiche Widerstandswerte vorliegen.
 
 \begin{center}
     \input{circuits/Symetrien.tex}
 \end{center}
 
 Nun können beide Seiten separat angeschaut werden. 
-Da beide Seiten identisch sind, kann nur eine Seite berechnet und der resultierende Wert halbiert werden. 
+Da beide Seiten identisch sind, muss nur eine Seite berechnet und der resultierende Wert halbiert werden. 
