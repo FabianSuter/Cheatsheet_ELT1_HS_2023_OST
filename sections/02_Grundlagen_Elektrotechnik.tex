@@ -154,24 +154,29 @@ Elektrische Leitfähigkeit ist eine Materialeigenschaft und hängt von der Mobil
 Die Faktoren \say{n} und \say{q} sind dabei Materialkonstanten. 
 \say{\textmu} ist allerdings temperaturabhängig. 
 
-\subsubsection{Mobilität}
-
-Die Mobilität \textmu eines Ladungsträgers setzt sich wie folgt zusammen:
-\begin{align*}
-    \text{\textmu}& =  \frac{\text{q}\tau}{\text{m}}\\
-    \text{q}& = \text{Ladung des Ladungsträger}\\
-    \tau& = \text{Mittlere Stosszeit zwischen den Ladungsträger}\\
-    \text{m}& = \text{Masse des Ladungsträger}\\
-    \newline
-    [\text{\textmu}]& = \unit[per-mode=fraction]{\coulomb\second\per\kilo\gram} = \unit[per-mode=fraction]{\square\meter\per\volt\per\second}
-\end{align*}
-
-
-\subsubsection{Spezifischer Widerstand}
-
-Der Kehrwert der Leitfähigkeit wird oftmals auch verwendet:
-
-\[ [\text{Spezifischer Widerstand}] = \left[ \frac{1}{\sigma} \right] = [\varrho] = \unit[per-mode=fraction]{\volt\meter\per\ampere}\]
+\begin{minipage}[t]{0.49\linewidth}
+    \subsubsection{Mobilität}
+    
+    Die Mobilität (\textmu) eines Ladungsträgers setzt sich wie folgt zusammen:
+    \begin{align*}
+        \text{\textmu}& =  \frac{\text{q}\tau}{\text{m}}\\
+        \text{q}& = \text{Ladung des Ladungsträger}\\
+        \tau& = \text{Mittlere Stosszeit zwischen den Ladungsträger}\\
+        \text{m}& = \text{Masse des Ladungsträger}\\
+        \newline
+        [\text{\textmu}]& = \unit[per-mode=fraction]{\coulomb\second\per\kilo\gram} = \unit[per-mode=fraction]{\square\meter\per\volt\per\second}
+    \end{align*}
+    
+\end{minipage}
+\hfill\vline\hfill
+\begin{minipage}[t]{0.49\linewidth}
+    \subsubsection{Spezifischer Widerstand}
+    
+    Der Kehrwert der Leitfähigkeit wird oftmals auch verwendet:
+    
+    \[ [\text{Spezifischer Widerstand}] = \left[ \frac{1}{\sigma} \right] = [\varrho] = \unit[per-mode=fraction]{\volt\meter\per\ampere}\]
+    
+\end{minipage}
 
 \subsubsection{Widerstandsberechnungen}
 
@@ -184,6 +189,22 @@ Um aus Leitfähigkeit und spez. Widerstand einen Widerstand zu berechnen, könne
 
 Allerdings sind diese Formeln nicht allgemeingültig und können nur verwendet werden, wenn die Feldlinien konstant senkrecht zur Fläche stehen. 
 Manchmal wird die Einheit auch gekürzt dargestellt (machen aber nur einige fiese Dozenten).
+
+\subsubsection{Geläufige Werte}
+\renewcommand{\arraystretch}{1.3}
+\begin{center}
+    \begin{tabular}{|l|r|r|} \hline 
+        \textbf{Material}       & \textbf{Spezifischer Widerstand $[\varrho] = \unit[per-mode=fraction]{\nano\ohm\per\meter}$}    & \textbf{Leitfähigkeit $[\sigma] = \unit[per-mode=fraction]{\mega\siemens\per\meter}$} \\ \hline\hline 
+            Silber              & (15.5 - 16.3) 15.9          & (61.35 - 65) 63 \\\hline
+            Kupfer              & (16.8 - 17.8) 17.2          & (56 - 56.9) 58 \\\hline
+            Gold                & (22.1 - 24.4) 23.3          & (41 - 45) 43 \\\hline
+            Aluminium           & 27.0                        & 37 \\\hline
+            Wolfram             & (52.6 - 56.5) 55.6          & (17.7 - 19) 18 \\\hline
+            Blei                & 217.4                       & 4.6 \\\hline
+            Quecksilber (Hg)    & 1000                        & 1.0 \\\hline
+    \end{tabular}
+\end{center}
+\renewcommand{\arraystretch}{1}
 
 \subsection{Temperaturabhängigkeit}
 
